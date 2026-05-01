@@ -6,7 +6,7 @@ require('dotenv').config();
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: (import.meta.env.VITE_API_URL || 'http://localhost:3001').replace(/\/$/, ''),
+  origin: '*',
   credentials: true
 }));
 
